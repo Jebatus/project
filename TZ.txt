@@ -1,0 +1,21 @@
+1) Магазин
+2) Для всех зависимостей и классов используем Dependency injection (в виде библиотеки dishka)
+3) Архитектура: Сервис (только с бизнес логикой), DAO (взаимодействие с базой данных), framework - fastapi
+4) На каждый дао и сервис сделать интерфейс (контракт)
+5) Разделение по каталогам
+    /source
+        /папка application
+        /папка infrastructure
+        /папка presentation
+        main.py
+        di.py
+
+application - все интерфейсы
+infrastructure - реализации DAO и модели базы данных, настройки подключения к ней
+presentation - endpoint fastapi (route)
+
+6) Сервис orders - создает заказ (create/delete/get order id/update, filter by ect.)
+   Сервис users - создает и т.д пользователя
+   Сервис filters - фильтрация заказов
+
+7) Endpoint на каждое действие сервиса
